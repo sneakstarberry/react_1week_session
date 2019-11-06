@@ -29,7 +29,7 @@ function App() {
 export default App;
 </pre></code>
 ## HTML에 간단히 리액트 적용하기
-참고사이트:
+참고사이트:<br />
 https://ko.reactjs.org/docs/add-react-to-a-website.html
 https://gist.githubusercontent.com/gaearon/0b180827c190fe4fd98b4c7f570ea4a8/raw/b9157ce933c79a4559d2aa9ff3372668cce48de7/LikeButton.js
 <pre><code>
