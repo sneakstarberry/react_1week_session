@@ -28,9 +28,49 @@ function App() {
 
 export default App;
 </pre></code>
+## HTML에 간단히 리액트 적용하기
+참고사이트:
+https://ko.reactjs.org/docs/add-react-to-a-website.html
+https://gist.githubusercontent.com/gaearon/0b180827c190fe4fd98b4c7f570ea4a8/raw/b9157ce933c79a4559d2aa9ff3372668cce48de7/LikeButton.js
+<pre><code>
+    <!-- 리액트를 불러오는 코드들 -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    
+// likelion_button 컴포넌드 코드
+'use strict';
+
+const e = React.createElement;
+
+class LikeLionButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { liked: false };
+  }
+
+  render() {
+    if (this.state.liked) {
+      return 'You liked this.';
+    }
+
+    return e(
+      'button',
+      { onClick: () => this.setState({ liked: true }) },
+      'Like'
+    );
+  }
+}
+
+// 만든 컴포넌트를 어떤 html에 넣을지 지정해주는 코드
+const domContainer = document.querySelector('#likelion_button_container');
+ReactDOM.render(e(LikeLionButton), domContainer);
+
+</pre></code>
 
 
 
+
+<hr>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
