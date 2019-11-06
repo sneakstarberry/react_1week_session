@@ -52,7 +52,12 @@ class LikeLionButton extends React.Component {
     if (this.state.liked) {
       return 'You liked this.';
     }
-
+    //  "좋아요" <button>을 표시
+    //return (
+    //  <button onClick={() => this.setState({ liked: true })}>
+    //    Like
+    //  </button>
+    //);
     return e(
       'button',
       { onClick: () => this.setState({ liked: true }) },
@@ -65,6 +70,10 @@ class LikeLionButton extends React.Component {
 const domContainer = document.querySelector('#likelion_button_container');
 ReactDOM.render(e(LikeLionButton), domContainer);
 
+
+//JSX 시도하기
+//아래 스크립트를 html안 리액트 스크립트 아래에 추가해줍니다.
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </pre></code>
 
 
